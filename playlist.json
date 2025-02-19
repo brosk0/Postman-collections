@@ -1,0 +1,488 @@
+{
+	"info": {
+		"_postman_id": "ba39723d-d002-43aa-a142-86dd2f907d53",
+		"name": "Работа с плейлистами",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39515441"
+	},
+	"item": [
+		{
+			"name": "Возвращает список плейлистов автора канала",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{prod}}/api/playlist/user/37028435/",
+					"host": [
+						"{{prod}}"
+					],
+					"path": [
+						"api",
+						"playlist",
+						"user",
+						"37028435",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Получение информации по кастомному плейлисту",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{prod}}/api/playlist/custom/417050/",
+					"host": [
+						"{{prod}}"
+					],
+					"path": [
+						"api",
+						"playlist",
+						"custom",
+						"417050",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Удаление кастомного плейлиста",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{prod}}/api/playlist/custom/417050/",
+					"host": [
+						"{{prod}}"
+					],
+					"path": [
+						"api",
+						"playlist",
+						"custom",
+						"417050",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Получение информации по кастомному плейлисту после удаления",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{prod}}/api/playlist/custom/417050/",
+					"host": [
+						"{{prod}}"
+					],
+					"path": [
+						"api",
+						"playlist",
+						"custom",
+						"417050",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Возвращает список плейлистов автора канала Copy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{prod}}/api/playlist/user/37028435/",
+					"host": [
+						"{{prod}}"
+					],
+					"path": [
+						"api",
+						"playlist",
+						"user",
+						"37028435",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Создание кастомного плейлиста",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Test playlist\",\n    \"description\": \"Test API for playlist\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{prod}}/api/playlist/custom/",
+					"host": [
+						"{{prod}}"
+					],
+					"path": [
+						"api",
+						"playlist",
+						"custom",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Получение информации по кастомному плейлисту после создания",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{prod}}/api/playlist/custom/417059/",
+					"host": [
+						"{{prod}}"
+					],
+					"path": [
+						"api",
+						"playlist",
+						"custom",
+						"417059",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Возвращает список плейлистов автора канала после создания пустого плейлиста",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{prod}}/api/playlist/user/37028435/?allow_owner_empty=1",
+					"host": [
+						"{{prod}}"
+					],
+					"path": [
+						"api",
+						"playlist",
+						"user",
+						"37028435",
+						""
+					],
+					"query": [
+						{
+							"key": "allow_owner_empty",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Добавление одного видео в плейлист",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"video_ids\": [\n        \"905e1f055d5b50454a5a4010eb20f1fa\"\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{prod}}/api/playlist/custom/417059",
+					"host": [
+						"{{prod}}"
+					],
+					"path": [
+						"api",
+						"playlist",
+						"custom",
+						"417059"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Получение информации по кастомному плейлисту после добавления одного видео",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{prod}}/api/playlist/custom/417059/",
+					"host": [
+						"{{prod}}"
+					],
+					"path": [
+						"api",
+						"playlist",
+						"custom",
+						"417059",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Возвращает список плейлистов автора канала после добавления видео в плейлист",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{prod}}/api/playlist/user/37028435/",
+					"host": [
+						"{{prod}}"
+					],
+					"path": [
+						"api",
+						"playlist",
+						"user",
+						"37028435",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Добавление 2-х видео в плейлист",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"video_ids\": [\n        \"d5c79b6574ca7b4ee1cf59936131e38b\",\n        \"d8de57b928be1f59165379dd731cf652\"\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{prod}}/api/playlist/custom/417059",
+					"host": [
+						"{{prod}}"
+					],
+					"path": [
+						"api",
+						"playlist",
+						"custom",
+						"417059"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Получение информации по кастомному плейлисту после добавления 2-х видео",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{prod}}/api/playlist/custom/417059/",
+					"host": [
+						"{{prod}}"
+					],
+					"path": [
+						"api",
+						"playlist",
+						"custom",
+						"417059",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Удаление видео из плейлиста",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{prod}}/api/playlist/custom/417059/d8de57b928be1f59165379dd731cf652/",
+					"host": [
+						"{{prod}}"
+					],
+					"path": [
+						"api",
+						"playlist",
+						"custom",
+						"417059",
+						"d8de57b928be1f59165379dd731cf652",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Получение информации по кастомному плейлисту после удаления видео",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{prod}}/api/playlist/custom/417059/",
+					"host": [
+						"{{prod}}"
+					],
+					"path": [
+						"api",
+						"playlist",
+						"custom",
+						"417059",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Получение информации по кастомному плейлисту после удаления видео Copy",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"description\": \"Измененное описание\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{prod}}/api/playlist/custom/417059/",
+					"host": [
+						"{{prod}}"
+					],
+					"path": [
+						"api",
+						"playlist",
+						"custom",
+						"417059",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Получение информации по кастомному плейлисту после измения описания",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{prod}}/api/playlist/custom/417059/",
+					"host": [
+						"{{prod}}"
+					],
+					"path": [
+						"api",
+						"playlist",
+						"custom",
+						"417059",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Удаление кастомного плейлиста",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{prod}}/api/playlist/custom/417050/",
+					"host": [
+						"{{prod}}"
+					],
+					"path": [
+						"api",
+						"playlist",
+						"custom",
+						"417050",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Получение информации по кастомному плейлисту после удаления",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{prod}}/api/playlist/custom/417059/",
+					"host": [
+						"{{prod}}"
+					],
+					"path": [
+						"api",
+						"playlist",
+						"custom",
+						"417059",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJydXBhc3NfaWQiOjMyMDI4NjM4LCJlbWFpbF9jb25maXJtZWQiOnsidHlwZW9mIjoiYm9vbCIsInZhbHVlIjp0cnVlfSwiaGFzX3Bob25lIjp7InR5cGVvZiI6ImJvb2wiLCJ2YWx1ZSI6ZmFsc2V9LCJleHAiOjE3MjAwODUxNTUsIm9yaWdfaWF0IjoxNzE3NDkzMTU1LCJ1c2VyX2lkIjozNzAyODQzNSwiZGF0YSI6eyJ1c2VyX2luZm8iOnsiaWQiOjM3MDI4NDM1fX0sInVzZXJuYW1lIjoidnp2eWFnaW5jZXZAcnV0dWJlLnJ1IiwiZW1haWwiOiJ2enZ5YWdpbmNldkBydXR1YmUucnUiLCJuYW1lIjoiY2hhbm5lbDM3MDI4NDM1In0.vsW4uQpW9Epb2lxbI2tI7p-6urXYPG6xddnPlYN-LVs",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "prod",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
