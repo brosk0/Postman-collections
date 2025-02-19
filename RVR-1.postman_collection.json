@@ -1,0 +1,250 @@
+{
+	"info": {
+		"_postman_id": "658f8e22-5acf-4b8f-9c01-74ec2746e049",
+		"name": "RVR-1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39515441"
+	},
+	"item": [
+		{
+			"name": "ratings_list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://rating.rutube.dev/api/ratings/",
+					"protocol": "https",
+					"host": [
+						"rating",
+						"rutube",
+						"dev"
+					],
+					"path": [
+						"api",
+						"ratings",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ratings_create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"video_id\": \"1234560\",\n        \"imdb_id\": \"9988\"\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://rating.rutube.dev/api/ratings/",
+					"protocol": "https",
+					"host": [
+						"rating",
+						"rutube",
+						"dev"
+					],
+					"path": [
+						"api",
+						"ratings",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ratings_get_rating_by_imdb_id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://rating.rutube.dev/api/ratings/imdb/9988",
+					"protocol": "https",
+					"host": [
+						"rating",
+						"rutube",
+						"dev"
+					],
+					"path": [
+						"api",
+						"ratings",
+						"imdb",
+						"9988"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ratings_read",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://rating.rutube.dev/api/ratings/5/",
+					"protocol": "https",
+					"host": [
+						"rating",
+						"rutube",
+						"dev"
+					],
+					"path": [
+						"api",
+						"ratings",
+						"5",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ratings_update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"video_id\": \"123500\",\n    \"imdb_id\": \"9950\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://rating.rutube.dev/api/ratings/5/",
+					"protocol": "https",
+					"host": [
+						"rating",
+						"rutube",
+						"dev"
+					],
+					"path": [
+						"api",
+						"ratings",
+						"5",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ratings_update_video_id",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"video_id\": \"5500\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://rating.rutube.dev/api/ratings/5/",
+					"protocol": "https",
+					"host": [
+						"rating",
+						"rutube",
+						"dev"
+					],
+					"path": [
+						"api",
+						"ratings",
+						"5",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ratings_update_imdb_id",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"imdb_id\": \"2024\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://rating.rutube.dev/api/ratings/5/",
+					"protocol": "https",
+					"host": [
+						"rating",
+						"rutube",
+						"dev"
+					],
+					"path": [
+						"api",
+						"ratings",
+						"5",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ratings_delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://rating.rutube.dev/api/ratings/5/",
+					"protocol": "https",
+					"host": [
+						"rating",
+						"rutube",
+						"dev"
+					],
+					"path": [
+						"api",
+						"ratings",
+						"5",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
