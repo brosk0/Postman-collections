@@ -1,0 +1,692 @@
+{
+	"info": {
+		"_postman_id": "ef7841f5-7f24-4728-ac6b-17f5bdd829f8",
+		"name": "SCHOOL-1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39515441"
+	},
+	"item": [
+		{
+			"name": "Авторизация пользователя в системе",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"vlad@gmail.com\",\n    \"password\": \"qwerty123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://2.59.41.2:4300/api/login",
+					"protocol": "http",
+					"host": [
+						"2",
+						"59",
+						"41",
+						"2"
+					],
+					"port": "4300",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Получение списка дел",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://2.59.41.2:4300/api/todos/{{user_id}}",
+					"protocol": "http",
+					"host": [
+						"2",
+						"59",
+						"41",
+						"2"
+					],
+					"port": "4300",
+					"path": [
+						"api",
+						"todos",
+						"{{user_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Создание дела",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"user_id\": {{user_id}},\n  \"title\": \"Провести урок по API\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://2.59.41.2:4300/api/todos/",
+					"protocol": "http",
+					"host": [
+						"2",
+						"59",
+						"41",
+						"2"
+					],
+					"port": "4300",
+					"path": [
+						"api",
+						"todos",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Создание дела длина title 1 символ",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"user_id\": {{user_id}},\n  \"title\": \"V\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://2.59.41.2:4300/api/todos/",
+					"protocol": "http",
+					"host": [
+						"2",
+						"59",
+						"41",
+						"2"
+					],
+					"port": "4300",
+					"path": [
+						"api",
+						"todos",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Создание дела длина title 0 символов",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"user_id\": {{user_id}},\n  \"title\": \"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://2.59.41.2:4300/api/todos/",
+					"protocol": "http",
+					"host": [
+						"2",
+						"59",
+						"41",
+						"2"
+					],
+					"port": "4300",
+					"path": [
+						"api",
+						"todos",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Создание дела длина title 30 символов",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"user_id\": {{user_id}},\n  \"title\": \"012345678901234567890123456789\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://2.59.41.2:4300/api/todos/",
+					"protocol": "http",
+					"host": [
+						"2",
+						"59",
+						"41",
+						"2"
+					],
+					"port": "4300",
+					"path": [
+						"api",
+						"todos",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Создание дела длина title 31 символ",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"user_id\": {{user_id}},\n  \"title\": \"0123456789012345678901234567890\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://2.59.41.2:4300/api/todos/",
+					"protocol": "http",
+					"host": [
+						"2",
+						"59",
+						"41",
+						"2"
+					],
+					"port": "4300",
+					"path": [
+						"api",
+						"todos",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Создание дела длина title 40 символов",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"user_id\": {{user_id}},\n  \"title\": \"0123456789012345678901234567890123456789\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://2.59.41.2:4300/api/todos/",
+					"protocol": "http",
+					"host": [
+						"2",
+						"59",
+						"41",
+						"2"
+					],
+					"port": "4300",
+					"path": [
+						"api",
+						"todos",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Создание дела без обязательного поля user id",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"title\": \"Провести урок по API\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://2.59.41.2:4300/api/todos/",
+					"protocol": "http",
+					"host": [
+						"2",
+						"59",
+						"41",
+						"2"
+					],
+					"port": "4300",
+					"path": [
+						"api",
+						"todos",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Создание дела c чужим user id",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"user_id\": 60,\n  \"title\": \"Провести урок по API\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://2.59.41.2:4300/api/todos/",
+					"protocol": "http",
+					"host": [
+						"2",
+						"59",
+						"41",
+						"2"
+					],
+					"port": "4300",
+					"path": [
+						"api",
+						"todos",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Создание дела без обязательного поля title",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"user_id\": {{user_id}}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://2.59.41.2:4300/api/todos/",
+					"protocol": "http",
+					"host": [
+						"2",
+						"59",
+						"41",
+						"2"
+					],
+					"port": "4300",
+					"path": [
+						"api",
+						"todos",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Создание дела с полем title другого типа данных",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"user_id\": {{user_id}},\n  \"title\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://2.59.41.2:4300/api/todos/",
+					"protocol": "http",
+					"host": [
+						"2",
+						"59",
+						"41",
+						"2"
+					],
+					"port": "4300",
+					"path": [
+						"api",
+						"todos",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Отредактировать поле title в созданном деле",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"user_id\": {{user_id}},\n  \"title\": \"Edited\",\n  \"completed\": false\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://2.59.41.2:4300/api/todos/{{todo_id}}",
+					"protocol": "http",
+					"host": [
+						"2",
+						"59",
+						"41",
+						"2"
+					],
+					"port": "4300",
+					"path": [
+						"api",
+						"todos",
+						"{{todo_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Отредактировать поле completed в созданном деле",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"user_id\": {{user_id}},\n  \"title\": \"Edited\",\n  \"completed\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://2.59.41.2:4300/api/todos/{{todo_id}}",
+					"protocol": "http",
+					"host": [
+						"2",
+						"59",
+						"41",
+						"2"
+					],
+					"port": "4300",
+					"path": [
+						"api",
+						"todos",
+						"{{todo_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Отредактировать поле completed в созданном деле поставить строку",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"user_id\": {{user_id}},\n  \"title\": \"Edited\",\n  \"completed\": \"Vadim Zviagintsev\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://2.59.41.2:4300/api/todos/{{todo_id}}",
+					"protocol": "http",
+					"host": [
+						"2",
+						"59",
+						"41",
+						"2"
+					],
+					"port": "4300",
+					"path": [
+						"api",
+						"todos",
+						"{{todo_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Отредактировать дело, принадлежащее другому пользователю",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"user_id\": {{user_id}},\n  \"title\": \"Edited\",\n  \"completed\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://2.59.41.2:4300/api/todos/6482",
+					"protocol": "http",
+					"host": [
+						"2",
+						"59",
+						"41",
+						"2"
+					],
+					"port": "4300",
+					"path": [
+						"api",
+						"todos",
+						"6482"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Отредактировать несуществующее/удалённое дело",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"user_id\": {{user_id}},\n  \"title\": \"Edited\",\n  \"completed\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://2.59.41.2:4300/api/todos/18094",
+					"protocol": "http",
+					"host": [
+						"2",
+						"59",
+						"41",
+						"2"
+					],
+					"port": "4300",
+					"path": [
+						"api",
+						"todos",
+						"18094"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Удалить своё дело",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://2.59.41.2:4300/api/todos/{{user_id}}/18094",
+					"protocol": "http",
+					"host": [
+						"2",
+						"59",
+						"41",
+						"2"
+					],
+					"port": "4300",
+					"path": [
+						"api",
+						"todos",
+						"{{user_id}}",
+						"18094"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Удалить дело, которого нет",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://2.59.41.2:4300/api/todos/{{user_id}}/18050",
+					"protocol": "http",
+					"host": [
+						"2",
+						"59",
+						"41",
+						"2"
+					],
+					"port": "4300",
+					"path": [
+						"api",
+						"todos",
+						"{{user_id}}",
+						"18050"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Удалить чужое дело",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://2.59.41.2:4300/api/todos/{{user_id}}/6482",
+					"protocol": "http",
+					"host": [
+						"2",
+						"59",
+						"41",
+						"2"
+					],
+					"port": "4300",
+					"path": [
+						"api",
+						"todos",
+						"{{user_id}}",
+						"6482"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InZsYWRAZ21haWwuY29tIiwiaWQiOjEzMywiaWF0IjoxNzMxNTg2Mjk5LCJleHAiOjE3MzE1ODcxOTl9.5hr0cRe6R3FRiFELEvUyjfb5CkmIj1r3-NOfUi-zoFM",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "user_id",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "todo_id",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
