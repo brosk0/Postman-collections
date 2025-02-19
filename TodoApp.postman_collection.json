@@ -1,0 +1,372 @@
+{
+	"info": {
+		"_postman_id": "015b53af-5d9f-4da7-9de0-5c51ef6dbdee",
+		"name": "Todo App",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39515441"
+	},
+	"item": [
+		{
+			"name": "Registration",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"vlad11@yahoo.com\",\n  \"password\": \"qwerty123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://2.59.41.2:4300/api/registration",
+					"protocol": "http",
+					"host": [
+						"2",
+						"59",
+						"41",
+						"2"
+					],
+					"port": "4300",
+					"path": [
+						"api",
+						"registration"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"vlad11@yahoo.com\",\n  \"password\": \"qwerty123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://2.59.41.2:4300/api/login",
+					"protocol": "http",
+					"host": [
+						"2",
+						"59",
+						"41",
+						"2"
+					],
+					"port": "4300",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get list of todos",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InZsYWQxMUB5YWhvby5jb20iLCJpZCI6MTMzNzcsImlhdCI6MTczMTMyMDg2OCwiZXhwIjoxNzMxMzIxNzY4fQ.vyFFAnN26SrXjaugCb6PiRras-QhcQaRh0qkxtgV1M4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://2.59.41.2:4300/api/todos/{{user_id}}",
+					"protocol": "http",
+					"host": [
+						"2",
+						"59",
+						"41",
+						"2"
+					],
+					"port": "4300",
+					"path": [
+						"api",
+						"todos",
+						"{{user_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create new todo",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InZsYWQxMUB5YWhvby5jb20iLCJpZCI6MTMzNzcsImlhdCI6MTczMTMyMDg2OCwiZXhwIjoxNzMxMzIxNzY4fQ.vyFFAnN26SrXjaugCb6PiRras-QhcQaRh0qkxtgV1M4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"user_id\": {{user_id}},\n  \"title\": \"Провести урок по Postman\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://2.59.41.2:4300/api/todos",
+					"protocol": "http",
+					"host": [
+						"2",
+						"59",
+						"41",
+						"2"
+					],
+					"port": "4300",
+					"path": [
+						"api",
+						"todos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get list of todos after creation",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InZsYWQxMUB5YWhvby5jb20iLCJpZCI6MTMzNzcsImlhdCI6MTczMTMyMDg2OCwiZXhwIjoxNzMxMzIxNzY4fQ.vyFFAnN26SrXjaugCb6PiRras-QhcQaRh0qkxtgV1M4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://2.59.41.2:4300/api/todos/{{user_id}}",
+					"protocol": "http",
+					"host": [
+						"2",
+						"59",
+						"41",
+						"2"
+					],
+					"port": "4300",
+					"path": [
+						"api",
+						"todos",
+						"{{user_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update existed todo",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InZsYWQxMUB5YWhvby5jb20iLCJpZCI6MTMzNzcsImlhdCI6MTczMTMyMDg2OCwiZXhwIjoxNzMxMzIxNzY4fQ.vyFFAnN26SrXjaugCb6PiRras-QhcQaRh0qkxtgV1M4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"user_id\": {{user_id}},\n  \"title\": \"Make a lesson Postman\",\n  \"completed\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://2.59.41.2:4300/api/todos/{{todo_id}}",
+					"protocol": "http",
+					"host": [
+						"2",
+						"59",
+						"41",
+						"2"
+					],
+					"port": "4300",
+					"path": [
+						"api",
+						"todos",
+						"{{todo_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get list of todos after updating",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InZsYWQxMUB5YWhvby5jb20iLCJpZCI6MTMzNzcsImlhdCI6MTczMTMyMDg2OCwiZXhwIjoxNzMxMzIxNzY4fQ.vyFFAnN26SrXjaugCb6PiRras-QhcQaRh0qkxtgV1M4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://2.59.41.2:4300/api/todos/{{user_id}}",
+					"protocol": "http",
+					"host": [
+						"2",
+						"59",
+						"41",
+						"2"
+					],
+					"port": "4300",
+					"path": [
+						"api",
+						"todos",
+						"{{user_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete todo",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InZsYWQxMUB5YWhvby5jb20iLCJpZCI6MTMzNzcsImlhdCI6MTczMTMyMDg2OCwiZXhwIjoxNzMxMzIxNzY4fQ.vyFFAnN26SrXjaugCb6PiRras-QhcQaRh0qkxtgV1M4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://2.59.41.2:4300/api/todos/{{todo_id}}/{{user_id}}",
+					"protocol": "http",
+					"host": [
+						"2",
+						"59",
+						"41",
+						"2"
+					],
+					"port": "4300",
+					"path": [
+						"api",
+						"todos",
+						"{{todo_id}}",
+						"{{user_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get list of todos after deleting",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InZsYWQxMUB5YWhvby5jb20iLCJpZCI6MTMzNzcsImlhdCI6MTczMTMyMDg2OCwiZXhwIjoxNzMxMzIxNzY4fQ.vyFFAnN26SrXjaugCb6PiRras-QhcQaRh0qkxtgV1M4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://2.59.41.2:4300/api/todos/{{user_id}}",
+					"protocol": "http",
+					"host": [
+						"2",
+						"59",
+						"41",
+						"2"
+					],
+					"port": "4300",
+					"path": [
+						"api",
+						"todos",
+						"{{user_id}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InZhZGltQHlhaG9vLmNvbSIsImlkIjoxMTcsImlhdCI6MTY5MDM5NjcyOSwiZXhwIjoxNjkwMzk3NjI5fQ.b66wlemZBPZFg3YcgVvrZngdbMTTEvnC-EbW6FgL4kM",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "user_id",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "todo_id",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
